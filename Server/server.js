@@ -31,9 +31,9 @@ app.use("/api/v1/post", require("./routers/postRouter"));
 app.get('/', (req, res) => {
     res.status(200).send({
         "success": true,
-        "message": "Welcome Dzung"
-    });
-});
+        "msg": "Node server is running"
+    })
+})
 
 
 //PORT

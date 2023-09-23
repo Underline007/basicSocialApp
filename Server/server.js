@@ -23,12 +23,12 @@ app.use(morgan("dev"));
 
 
 //router
-// app.get('', (req, res) => {
-//     res.status(200).json({
-//         success: true,
-//         message: "Welcome Dzung"
-//     });
-// });
+app.get('/', (req, res) => {
+    res.status(200).send({
+        "success": true,
+        "message": "Welcome Dzung"
+    });
+});
 
 app.use("/api/v1/auth", require("./routers/userRouter"));
 app.use("/api/v1/post", require("./routers/postRouter"));

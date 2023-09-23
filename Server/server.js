@@ -22,6 +22,11 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 
+
+
+app.use("/api/v1/auth", require("./routers/userRouter"));
+app.use("/api/v1/post", require("./routers/postRouter"));
+
 //router
 app.get('/', (req, res) => {
     res.status(200).send({
@@ -29,9 +34,6 @@ app.get('/', (req, res) => {
         "message": "Welcome Dzung"
     });
 });
-
-app.use("/api/v1/auth", require("./routers/userRouter"));
-app.use("/api/v1/post", require("./routers/postRouter"));
 
 
 //PORT

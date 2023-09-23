@@ -1,0 +1,7 @@
+npm init
+npm install express mongoose morgan colors dotenv bcrypt cors
+npm install -g nodemon
+npm i jsonwebtoken
+
+
+==========npm i express-jwt
